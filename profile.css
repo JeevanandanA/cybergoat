@@ -1,0 +1,226 @@
+.profile-page {
+    padding-top: 80px;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #000000, #001a1a);
+}
+
+.profile-hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(45deg, rgba(0, 255, 255, 0.1), rgba(0, 102, 255, 0.1));
+}
+
+.profile-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #00ffff, #0066ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #ccc;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.company-overview {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.overview-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.overview-content h2 {
+    color: #00ffff;
+    margin-bottom: 2rem;
+}
+
+.overview-content p {
+    color: #ccc;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.download-btn {
+    display: inline-block;
+    background: #00ffff;
+    color: #000;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    background: #00cccc;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+}
+
+.capabilities {
+    padding: 4rem 0;
+    text-align: center;
+    background: linear-gradient(45deg, rgba(0, 255, 255, 0.05), rgba(0, 102, 255, 0.05));
+}
+
+.capabilities h2 {
+    margin-bottom: 3rem;
+    color: #00ffff;
+}
+
+.capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.capability {
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.capability:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+}
+
+.capability h3 {
+    color: #00ffff;
+    margin-bottom: 1rem;
+}
+
+.capability ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.capability li {
+    color: #ccc;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.capability li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #00ffff;
+}
+
+.certifications {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.certifications h2 {
+    margin-bottom: 3rem;
+    color: #00ffff;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.cert-item {
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.cert-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+}
+
+.cert-item h3 {
+    color: #00ffff;
+    margin-bottom: 0.5rem;
+}
+
+.cert-item p {
+    color: #ccc;
+}
+
+.expertise {
+    padding: 4rem 0;
+    text-align: center;
+    background: linear-gradient(45deg, rgba(0, 255, 255, 0.05), rgba(0, 102, 255, 0.05));
+}
+
+.expertise h2 {
+    margin-bottom: 3rem;
+    color: #00ffff;
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.expertise-item {
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.expertise-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+}
+
+.expertise-item h3 {
+    color: #00ffff;
+    margin-bottom: 1rem;
+}
+
+.expertise-item p {
+    color: #ccc;
+}
+
+@media (max-width: 768px) {
+    .profile-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .capabilities-grid,
+    .cert-grid,
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+} 

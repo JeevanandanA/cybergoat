@@ -1,0 +1,183 @@
+:root {
+    --ink: #07100e;
+    --ink-soft: #0d1a17;
+    --panel: rgba(14, 31, 26, 0.88);
+    --panel-strong: #12251f;
+    --line: rgba(189, 255, 74, 0.22);
+    --lime: #c6ff4a;
+    --lime-deep: #8fca2f;
+    --cream: #f0f4df;
+    --muted: #a5b3a6;
+    --signal: #ffb454;
+    --font-display: Georgia, 'Times New Roman', serif;
+    --font-body: 'Trebuchet MS', Verdana, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body {
+    background: var(--ink);
+    color: var(--cream);
+    font-family: var(--font-body);
+    line-height: 1.65;
+    background-image: linear-gradient(rgba(198, 255, 74, 0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(198, 255, 74, 0.025) 1px, transparent 1px);
+    background-size: 42px 42px;
+}
+body::before { content: ''; position: fixed; inset: 0; pointer-events: none; background: radial-gradient(circle at 90% 10%, rgba(198,255,74,.12), transparent 26rem), radial-gradient(circle at 0 70%, rgba(255,180,84,.07), transparent 22rem); z-index: -1; }
+.container { max-width: 1180px; padding: 2rem; }
+.navbar { background: rgba(7, 16, 14, .94); border-bottom: 1px solid var(--line); backdrop-filter: blur(14px); padding: .7rem 0; }
+.navbar .container { padding-top: .8rem; padding-bottom: .8rem; }
+.logo, .logo a { color: var(--lime); font-family: var(--font-display); letter-spacing: .12em; }
+.logo a { gap: .55rem; }
+.logo-text { text-shadow: 0 0 18px rgba(198,255,74,.45); }
+.logo-icon { color: var(--lime); }
+.logo-image { width: 42px; height: 42px; object-fit: cover; border: 1px solid var(--lime); border-radius: 50%; box-shadow: 0 0 16px rgba(145, 230, 61, .28); transition: transform .3s ease, box-shadow .3s ease; }
+.logo a:hover .logo-image { transform: rotate(4deg) scale(1.06); box-shadow: 0 0 22px rgba(145, 230, 61, .52); }
+.nav-links a { color: var(--muted); font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; }
+.nav-links a::after { background: var(--lime); }
+.nav-links a:hover, .nav-links a.active { color: var(--lime); }
+.menu-btn span { background: var(--lime); }
+.hero, .about-page, .projects-page, .clients-page, .profile-page, .contact-page { background: transparent; }
+.hero { min-height: 100vh; justify-content: flex-start; text-align: left; padding: 9rem max(2rem, calc((100vw - 1180px) / 2)) 5rem; position: relative; overflow: hidden; }
+.hero::after { content: 'CYBERGOAT / SECURITY OPERATIONS'; position: absolute; right: 7%; bottom: 8%; color: rgba(198,255,74,.22); font-size: .7rem; letter-spacing: .25em; writing-mode: vertical-rl; }
+.hero-content { max-width: 760px; }
+.hero-content h1, .about-hero h1, .projects-hero h1, .clients-hero h1, .profile-hero h1, .contact-hero h1 { color: var(--cream); font-family: var(--font-display); font-size: clamp(3.4rem, 9vw, 7.8rem); line-height: .95; letter-spacing: -.03em; text-shadow: 8px 8px 0 rgba(198,255,74,.12); }
+.hero-content h1::first-letter, .about-hero h1::first-letter, .projects-hero h1::first-letter, .clients-hero h1::first-letter, .profile-hero h1::first-letter, .contact-hero h1::first-letter { color: var(--lime); }
+.hero-content .tagline { color: var(--lime); background: none; -webkit-text-fill-color: initial; font-family: var(--font-body); font-size: clamp(1.2rem, 2vw, 1.7rem); letter-spacing: .12em; animation: none; }
+.hero-content .subtitle, .about-hero p, .projects-hero p, .clients-hero p, .profile-hero p, .contact-hero p { color: var(--muted); }
+.cta-btn, .submit-btn, .download-btn { background: var(--lime); border: 1px solid var(--lime); border-radius: 0; color: var(--ink); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; box-shadow: 5px 5px 0 rgba(198,255,74,.18); }
+.cta-btn:hover, .submit-btn:hover, .download-btn:hover { background: var(--cream); color: var(--ink); box-shadow: 2px 2px 0 var(--lime); }
+.about-hero, .projects-hero, .clients-hero, .profile-hero, .contact-hero { padding: 9rem 2rem 4rem; text-align: left; background: linear-gradient(90deg, rgba(198,255,74,.08), transparent 65%); border-bottom: 1px solid var(--line); }
+.about-hero h1, .projects-hero h1, .clients-hero h1, .profile-hero h1, .contact-hero h1 { font-size: clamp(3rem, 7vw, 6rem); }
+.card, .team-member, .feature, .case-study, .solution, .industry-card, .logo-item, .contact-form, .contact-info, .capability, .overview-content, .map-placeholder { background: var(--panel); border: 1px solid var(--line); border-radius: 0; box-shadow: 10px 10px 0 rgba(0,0,0,.18); }
+.card:hover, .team-member:hover, .feature:hover, .case-study:hover, .solution:hover { transform: translateY(-4px); box-shadow: 10px 14px 0 rgba(198,255,74,.08); }
+.card h2, .team h2, .team-member h3, .feature h3, .case-content h2, .solutions h2, .solution h3, .industries h2, .client-logos h2, .capabilities h2, .contact-form h2, .contact-info h2, .map-section h2 { color: var(--lime); font-family: var(--font-display); }
+.card p, .bio, .description, .feature p, .solution p, .industry-card p, .info-item p, .overview-content p { color: var(--muted); }
+.team-member .position, .industry { color: var(--signal); }
+.member-image { border-color: var(--lime); box-shadow: 0 0 20px rgba(198,255,74,.2); }
+.highlights li::before { color: var(--lime); }
+.case-image { background: linear-gradient(135deg, var(--lime), var(--signal)); opacity: .16; }
+.form-group label { color: var(--muted); font-size: .82rem; text-transform: uppercase; letter-spacing: .08em; }
+.form-group input, .form-group textarea { background: rgba(7,16,14,.7); border: 1px solid var(--line); border-radius: 0; color: var(--cream); }
+.form-group input:focus, .form-group textarea:focus { border-color: var(--lime); box-shadow: 0 0 0 3px rgba(198,255,74,.1); }
+.form-status { margin-bottom: 1.5rem; padding: .8rem 1rem; border-left: 3px solid var(--lime); background: rgba(198,255,74,.08); color: var(--lime); }
+.info-item h3, .location h4 { color: var(--lime); }
+.info-item a, .contact-info a { color: var(--cream); }
+.info-item a:hover { color: var(--lime); }
+.social-links { background: rgba(7,16,14,.55); border-color: var(--line); border-radius: 0; }
+.social-link, .social-item { color: var(--cream); border-color: var(--line); border-radius: 0; }
+.social-link:hover, .social-item:hover { background: var(--lime); color: var(--ink); }
+.differentiators, .solutions, .industries, .client-logos, .capabilities, .map-section { background: rgba(198,255,74,.035); border-top: 1px solid rgba(198,255,74,.08); }
+.logo-item { color: var(--muted); font-family: var(--font-display); font-size: 1.2rem; }
+.logo-item:hover { color: var(--lime); }
+@media (max-width: 992px) { .nav-links { background: var(--ink-soft); border-left-color: var(--line); } }
+@media (max-width: 600px) { .hero { padding-left: 1.2rem; padding-right: 1.2rem; } .container { padding-left: 1.2rem; padding-right: 1.2rem; } .hero::after { display: none; } }
+
+/* Shared professional visual system */
+:root {
+    --ink: #080f0b;
+    --ink-soft: #101b14;
+    --panel: rgba(17, 31, 22, 0.9);
+    --panel-strong: #17291c;
+    --line: rgba(145, 230, 61, 0.25);
+    --lime: #91e63d;
+    --lime-deep: #5fae24;
+    --cream: #f3f8ee;
+    --muted: #a7b8a5;
+    --signal: #d7f58d;
+    --font-display: 'Trebuchet MS', Verdana, sans-serif;
+    --font-body: 'Trebuchet MS', Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--ink);
+    background-image: linear-gradient(rgba(145, 230, 61, .035) 1px, transparent 1px), linear-gradient(90deg, rgba(145, 230, 61, .035) 1px, transparent 1px);
+    background-size: 48px 48px;
+}
+
+body::before {
+    background: radial-gradient(circle at 78% 12%, rgba(145, 230, 61, .1), transparent 25rem), radial-gradient(circle at 12% 80%, rgba(215, 245, 141, .06), transparent 24rem);
+}
+
+.navbar { background: rgba(8, 15, 11, .92); border-bottom-color: var(--line); }
+.nav-links a:hover, .nav-links a.active { color: var(--lime); }
+.hero, .about-page, .projects-page, .clients-page, .profile-page, .contact-page,
+.portfolio-stats, .filters-section, .featured-project-section { background: transparent !important; }
+.about-hero, .projects-hero, .clients-hero, .profile-hero, .contact-hero {
+    background: linear-gradient(105deg, rgba(145, 230, 61, .09), transparent 62%);
+    border-bottom-color: var(--line);
+}
+.about-hero h1, .projects-hero h1, .clients-hero h1, .profile-hero h1, .contact-hero h1 {
+    background: none;
+    color: var(--cream);
+    -webkit-text-fill-color: initial;
+}
+.hero-content h1::first-letter, .about-hero h1::first-letter, .projects-hero h1::first-letter,
+.clients-hero h1::first-letter, .profile-hero h1::first-letter, .contact-hero h1::first-letter { color: var(--lime); }
+.hero-content .tagline, .hero-subtitle, .featured-subtitle, .count-number, .stat-number { color: var(--lime); }
+.card, .team-member, .feature, .case-study, .solution, .industry-card, .logo-item,
+.contact-form, .contact-info, .capability, .overview-content, .map-placeholder, .testimonial,
+.stat-item, .featured-project, .cert-item, .expertise-item {
+    background: var(--panel) !important;
+    border-color: var(--line) !important;
+    border-radius: 4px;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, .2);
+}
+.card h2, .team h2, .team-member h3, .feature h3, .case-content h2, .solutions h2,
+.solution h3, .industries h2, .client-logos h2, .capabilities h2, .contact-form h2,
+.contact-info h2, .map-section h2, .industry-card h3, .certifications h2, .expertise h2,
+.capability h3, .cert-item h3, .expertise-item h3 { color: var(--lime); }
+.card p, .bio, .description, .feature p, .solution p, .industry-card p, .info-item p,
+.overview-content p, .capability li, .cert-item p, .expertise-item p, .quote { color: var(--muted); }
+.cta-btn, .submit-btn, .download-btn {
+    background: var(--lime); border-color: var(--lime); color: var(--ink); border-radius: 4px;
+}
+.cta-btn:hover, .submit-btn:hover, .download-btn:hover { background: var(--cream); color: var(--ink); }
+.form-group input, .form-group textarea { background: rgba(8, 15, 11, .78); border-color: var(--line); }
+.form-group input:focus, .form-group textarea:focus { border-color: var(--lime); box-shadow: 0 0 0 3px rgba(145, 230, 61, .12); }
+.differentiators, .solutions, .industries, .client-logos, .capabilities, .map-section, .expertise {
+    background: rgba(145, 230, 61, .035) !important; border-top-color: var(--line);
+}
+
+.scene-canvas {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: .7;
+    z-index: -1;
+}
+
+main, footer { position: relative; z-index: 1; }
+@media (prefers-reduced-motion: reduce) { .scene-canvas { display: none; } }
+
+.navbar .container { justify-content: flex-start; }
+.navbar .logo { flex: 0 0 auto; margin-right: auto; }
+.logo a {
+    gap: .25rem;
+    color: var(--lime);
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    letter-spacing: .13em;
+}
+.logo-text { margin-right: 0; color: var(--lime); text-shadow: 0 0 18px rgba(145, 230, 61, .45); }
+.logo-image {
+    display: block;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border: 2px solid var(--lime);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(145, 230, 61, .08), 0 0 20px rgba(145, 230, 61, .3);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+.logo a:hover .logo-text { color: var(--cream); }
+.logo a:hover .logo-image { transform: rotate(4deg) scale(1.06); box-shadow: 0 0 0 4px rgba(145, 230, 61, .13), 0 0 26px rgba(145, 230, 61, .55); }
+.nav-links { margin-left: 2rem; }
+.nav-links a:hover, .nav-links a.active { color: var(--lime); }
+.nav-links a::after { background: var(--lime); }
+.hero::after { color: rgba(145, 230, 61, .25); }
+.hero-content h1, .about-hero h1, .projects-hero h1, .clients-hero h1, .profile-hero h1, .contact-hero h1 { text-shadow: 8px 8px 0 rgba(145, 230, 61, .12); }
+.member-image { border-color: var(--lime); box-shadow: 0 0 20px rgba(145, 230, 61, .22); }
+.case-image { background: linear-gradient(135deg, var(--lime), var(--signal)); }
+@media (max-width: 992px) { .nav-links { margin-left: 0; } }
