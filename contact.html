@@ -41,66 +41,74 @@
             <div class="container">
                 <div class="contact-grid">
                     <div class="contact-form">
+                            <span class="contact-panel-label">01 / SECURE INTAKE</span>
                         <h2>Send Us a Message</h2>
-                        <form id="contactForm" action="/contact" method="post">
-                            <p class="form-status" id="formStatus" role="status" hidden>Message received. Our team will be in touch shortly.</p>
+                        <p class="contact-intro"><strong>Have a project in mind?</strong> Tell us what you need, and our team will help you find the right technology solution for your project.</p>
+                        <form id="contactForm" novalidate>
                             <div class="form-group">
                                 <label for="name">Name</label>
-                                <input type="text" id="name" name="name" required>
+                                <input type="text" id="name" name="name" required autocomplete="name" aria-describedby="nameError">
+                                <p class="field-error" id="nameError" role="alert"></p>
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required>
+                                <input type="email" id="email" name="email" required autocomplete="email" aria-describedby="emailError">
+                                <p class="field-error" id="emailError" role="alert"></p>
                             </div>
                             <div class="form-group">
-                                <label for="company">Company</label>
-                                <input type="text" id="company" name="company">
+                                <label for="company">Company <span class="field-optional">(optional)</span></label>
+                                <input type="text" id="company" name="company" autocomplete="organization">
                             </div>
                             <div class="form-group">
                                 <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="5" required></textarea>
+                                <textarea id="message" name="message" rows="5" required aria-describedby="messageError"></textarea>
+                                <p class="field-error" id="messageError" role="alert"></p>
                             </div>
-                            <button type="submit" class="submit-btn">Send Message</button>
+                            <button type="button" id="emailContactBtn" class="submit-btn"><i class="fas fa-paper-plane" aria-hidden="true"></i> Send Message <span aria-hidden="true">&#8594;</span></button>
+                            <div class="form-signal" aria-hidden="true">
+                                <span class="form-signal-status"><i></i> SECURE CHANNEL READY</span>
+                                <span class="form-signal-line"><i></i></span>
+                                <span class="form-signal-code">ENCRYPTED / CYBERGOAT-01</span>
+                            </div>
                         </form>
                     </div>
 
                     <div class="contact-info">
-                        <h2>Contact Information</h2>
+                            <span class="contact-panel-label">02 / DIRECT CHANNELS</span>
+                        <h2>Let's Talk About Your Project</h2>
+                        <p class="contact-info-intro">Whether you are building a new product, improving an existing system, or looking for a technology partner, we're ready to discuss your requirements.</p>
                         <div class="info-item">
                             <h3><i class="fas fa-envelope" aria-hidden="true"></i> Email</h3>
                             <p><a href="mailto:cybergoat.tech@gmail.com">cybergoat.tech@gmail.com</a></p>
                         </div>
                         <div class="info-item">
-                            <h3><i class="fas fa-phone" aria-hidden="true"></i> Phone</h3>
-                            <p><a href="tel:+918940814683">+91 8940814683</a></p>
+                            <h3><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</h3>
+                            <p>+91 8940814683</p>
                         </div>
                         <div class="info-item">
-                            <h3><i class="fas fa-location-dot" aria-hidden="true"></i> Office Location</h3>
-                            <div class="location">
-                                <h4>Headquarters</h4>
-                                <p>Thiruvannamalai City, Tamil Nadu<br>India</p>
-                            </div>
+                            <h3><i class="fas fa-globe" aria-hidden="true"></i> Website</h3>
+                            <p><a href="https://cybergoat.in" target="_blank" rel="noopener noreferrer">cybergoat.in</a></p>
                         </div>
-                        <a href="#" id="whatsappBtn" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">WhatsApp Us <span aria-hidden="true">&#8594;</span></a>
-                        <footer>
-                            <h3 class="social-heading">Connect with CyberGoat</h3>
-                            <div class="social-links" id="contact">
-                                <a href=" https://www.instagram.com/cybergoat.io?igsi=MW04ZXF3NHV6ZGJhNg== " target="_blank" rel="noopener noreferrer" class="social-link">
-                                    <i class="fab fa-instagram"></i>
-                                    <span>Instagram</span>
-                                </a>
-                                <!-- <a href="https://www.facebook.com/share/18eRz62aVq/" target="_blank" rel="noopener noreferrer" class="social-link">
-                                    <i class="fab fa-facebook"></i>
-                                    <span>Facebook</span>
-                                </a> -->
-                                <a href="https://www.linkedin.com/in/cyber-goat-28b171419/" target="_blank" rel="noopener noreferrer" class="social-link">
-                                    <i class="fab fa-linkedin"></i>
-                                    <span>LinkedIn</span>
-                                </a>
-                            </div>
-                            <!-- <p>&copy; 2024 CYBERGOAT. All rights reserved.</p> -->
-                        </footer>
-                    
+                        <button type="button" id="whatsappContactBtn" class="whatsapp-btn"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp Us <span aria-hidden="true">&#8594;</span></button>
+                        <div class="social-contact-actions">
+                            <a class="social-contact-btn" href="https://www.instagram.com/cybergoat.io/" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-instagram" aria-hidden="true"></i> Instagram <span aria-hidden="true">&#8599;</span>
+                            </a>
+                            <a class="social-contact-btn" href="https://www.linkedin.com/in/cyber-goat-28b171419/" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn <span aria-hidden="true">&#8599;</span>
+                            </a>
+                        </div>
+                        <p class="contact-vision-message">
+                            <span class="contact-quote-label">CYBERGOAT / FIELD NOTES</span>
+                            <strong>Your vision is the spark that starts it all.</strong>
+                            <strong>Our technology turns that vision into reality.</strong>
+                            <strong>Together, let's build something extraordinary.</strong>
+                            <span class="contact-quote-rule" aria-hidden="true"></span>
+                            <small>Ideas deserve infrastructure that can keep up.</small>
+                            <span class="contact-signal" aria-hidden="true">
+                                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                            </span>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -117,11 +125,65 @@
         </section>
     </main>
 
-    <script>
-        const phone = "918940814683"; // Replace with your phone number in international format
-        const message = "Hello CyberGoat! I visited your website and would like to know more about your services. I have a project/business requirement and would like to discuss it with your team.";
-        document.getElementById("whatsappBtn").href = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-    </script>
     <script src="script.js"></script>
+    <script>
+        (() => {
+            const form = document.getElementById('contactForm');
+            if (!form) return;
+
+            const fields = {
+                name: document.getElementById('name'),
+                email: document.getElementById('email'),
+                company: document.getElementById('company'),
+                message: document.getElementById('message')
+            };
+            const errors = {
+                name: document.getElementById('nameError'),
+                email: document.getElementById('emailError'),
+                message: document.getElementById('messageError')
+            };
+
+            function validateContactForm() {
+                const contact = {
+                    name: fields.name.value.trim(),
+                    email: fields.email.value.trim(),
+                    company: fields.company.value.trim() || 'Not provided',
+                    message: fields.message.value.trim()
+                };
+                const messages = {
+                    name: contact.name ? '' : 'Name is required.',
+                    email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact.email) ? '' : 'Enter a valid email address.',
+                    message: contact.message ? '' : 'Message is required.'
+                };
+                Object.keys(errors).forEach((field) => {
+                    errors[field].textContent = messages[field];
+                    fields[field].setAttribute('aria-invalid', messages[field] ? 'true' : 'false');
+                });
+                const firstInvalid = Object.keys(messages).find((field) => messages[field]);
+                if (firstInvalid) fields[firstInvalid].focus();
+                return firstInvalid ? null : contact;
+            }
+
+            form.addEventListener('submit', (event) => event.preventDefault());
+            document.getElementById('whatsappContactBtn').addEventListener('click', () => {
+                const hasFormData = Object.values(fields).some((field) => field.value.trim());
+                const contact = hasFormData ? validateContactForm() : null;
+                if (hasFormData && !contact) return;
+                const message = contact
+                    ? `Hello CyberGoat!\n\nI would like to discuss a project requirement.\n\nName: ${contact.name}\nEmail: ${contact.email}\nCompany: ${contact.company}\n\nProject Requirement:\n${contact.message}\n\nI found CyberGoat through your website and would like to discuss my requirement.`
+                    : 'Hello CyberGoat! I visited your website and would like to know more about your services. I have a project/business requirement and would like to discuss it with your team.';
+                const whatsappURL = `https://wa.me/${CONTACT_CONFIG.whatsapp}?text=${encodeURIComponent(message)}`;
+                window.open(whatsappURL, '_blank', 'noopener,noreferrer');
+            });
+            document.getElementById('emailContactBtn').addEventListener('click', () => {
+                const contact = validateContactForm();
+                if (!contact) return;
+                const subject = encodeURIComponent('New Project Inquiry — CyberGoat');
+                const body = encodeURIComponent(`Hello CyberGoat,\n\nI would like to discuss a project requirement.\n\nName: ${contact.name}\nEmail: ${contact.email}\nCompany: ${contact.company}\n\nProject Requirement:\n${contact.message}\n\nI contacted CyberGoat through the website and would like to discuss the project further.\n\nRegards,\n${contact.name}`);
+                const emailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(CONTACT_CONFIG.email)}&su=${subject}&body=${body}`;
+                window.open(emailURL, '_blank', 'noopener,noreferrer');
+            });
+        })();
+    </script>
 </body>
 </html> 

@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CYBERGOAT - Cybersecurity Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="clients.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="theme.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-                <a href="index.html">
+                <a href="#home">
                     <img class="logo-image" src="logo.png" alt="Cybergoat logo">
                     <span class="logo-text">CYBERGOAT</span>
                 </a>
@@ -22,25 +28,26 @@
                 <span></span>
             </button>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="clients.html">Clients</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#clients">Clients</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <main>
-        <section class="hero">
+        <section class="hero" id="home">
             <div class="hero-content">
                 <h1>CYBERGOAT</h1>
                 <p class="tagline">We are the future intelligence of cyber world</p>
                 <p class="subtitle">Securing Your Digital Future</p>
-                <a href="contact.html" class="cta-btn">Get Started</a>
+                <a href="#contact" class="cta-btn">Get Started</a>
             </div>
         </section>
+        <div id="page-sections" aria-live="polite"></div>
     </main>
     
     <script src="script.js"></script>

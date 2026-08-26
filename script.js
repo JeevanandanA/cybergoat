@@ -1,3 +1,8 @@
+const CONTACT_CONFIG = {
+    email: "cybergoat.tech@gmail.com",
+    whatsapp: "918940814683"
+};
+
 // Mobile Menu Toggle
 const menuBtn = document.querySelector('.menu-btn');
 const navLinks = document.querySelector('.nav-links');
@@ -115,3 +120,47 @@ window.addEventListener('resize', resizeScene);
 window.addEventListener('pointermove', event => { pointer.x = event.clientX / sceneWidth - .5; pointer.y = event.clientY / sceneHeight - .5; });
 requestAnimationFrame(drawScene);
 }
+
+async function loadSinglePageSections() {
+    const pageSections = document.getElementById('page-sections');
+    if (!pageSections) return;
+
+    const pages = [
+        ['about', 'about.html'],
+        ['projects', 'projects.html'],
+        ['clients', 'clients.html'],
+        ['profile', 'profile.html'],
+        ['contact', 'contact.html']
+    ];
+
+    for (const [pageId, pageUrl] of pages) {
+        const response = await fetch(pageUrl);
+        if (!response.ok) continue;
+
+        const pageDocument = new DOMParser().parseFromString(await response.text(), 'text/html');
+        const pageMain = pageDocument.querySelector('main');
+        if (!pageMain) continue;
+
+        pageMain.id = pageId;
+        pageMain.querySelectorAll('a[href$=".html"]').forEach((link) => {
+            const targetPage = link.getAttribute('href').replace('.html', '');
+            if (pages.some(([sectionId]) => sectionId === targetPage)) {
+                link.href = `#${targetPage}`;
+            }
+        });
+        pageSections.appendChild(pageMain);
+
+        pageDocument.querySelectorAll('script:not([src])').forEach((sourceScript) => {
+            const script = document.createElement('script');
+            script.textContent = sourceScript.textContent;
+            document.body.appendChild(script);
+        });
+    }
+
+    const loadedFormStatus = document.getElementById('formStatus');
+    if (loadedFormStatus && new URLSearchParams(window.location.search).get('sent') === '1') {
+        loadedFormStatus.hidden = false;
+    }
+}
+
+loadSinglePageSections();
